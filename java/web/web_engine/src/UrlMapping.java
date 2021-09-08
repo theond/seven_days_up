@@ -22,9 +22,9 @@ public class UrlMapping {
         return Singleton.INSTANCE.getInstance();
     }
 
-    private Map<String, String> urlMap = new HashMap<>();
+    private Map<String, Object> urlMap = new HashMap<>();
 
-    public void addMap(String url, String method){
+    public void addMap(String url, Object method){
         urlMap.put(url, method);
     }
 
@@ -32,7 +32,14 @@ public class UrlMapping {
         urlMap.putAll(map);
     }
 
-    public Map<String, String> getUrlMap(){
+    /*
+    public Map<String, Object> getUrlMap(){
         return this.urlMap;
+    }
+
+     */
+
+    public Object getMethod(String urlString){
+        return this.urlMap.get(urlString);
     }
 }
