@@ -3,7 +3,7 @@ import java.util.Map;
 
 public class UrlMapping {
 
-    private enum Singleton{
+    private static enum Singleton{
         INSTANCE;
 
         private final UrlMapping instance;
